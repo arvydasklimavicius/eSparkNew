@@ -77,6 +77,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Ywz-vI-bSY">
+                                <rect key="frame" x="0.0" y="46" width="414" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="By Plate Number"/>
+                                    <segment title="By Battery"/>
+                                    <segment title="By Distance"/>
+                                </segments>
+                                <connections>
+                                    <action selector="filterChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pFe-1D-qHN"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -88,6 +100,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="filterController" destination="Ywz-vI-bSY" id="gex-Bi-Ah7"/>
                         <outlet property="tableView" destination="UOX-I3-ZWs" id="Q5g-PK-erI"/>
                     </connections>
                 </viewController>

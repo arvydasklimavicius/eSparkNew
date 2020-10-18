@@ -10,15 +10,24 @@ import UIKit
 class ViewController: UIViewController {
     
     var availableVehicles = [VehicleData]()
+//    var vehicleApi = VehicleApi()
+    
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var filterController: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+//        vehicleApi.getVehicle()
+//        tableView.reloadData()
         getVehicle()
+        
+        
     }
+    
+ //MARK: - URL session call
     
     func getVehicle() {
         let session = URLSession.shared
@@ -53,9 +62,26 @@ class ViewController: UIViewController {
         }
         return availableVehicles
     }
-
+    
+    @IBAction func filterChanged(_ sender: UISegmentedControl) {
+//        switch filterController.selectedSegmentIndex {
+//        case 0:
+//            availableVehicles.sort { (first, second) -> Bool in
+//                first.plateNumber.lowercased() < second.plateNumber.lowercased()
+//                tableView.reloadData()
+//                return availableVehicles(first.plateNumber < second.plateNumber)
+//            }
+//        default: break
+//        }
+        
+    }
+    
+    
+    
 
 }
+
+//MARK: - TabkeView configuration
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
