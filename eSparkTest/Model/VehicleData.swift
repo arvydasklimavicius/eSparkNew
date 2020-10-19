@@ -10,6 +10,7 @@ import Foundation
 
 struct VehicleData: Codable {
     let plateNumber: String
+    let batteryPercentage: Int
     let model: Model
     let location: Location
     
@@ -26,9 +27,6 @@ struct Location: Codable {
     let address: String
 }
 
-enum sortinOption: Int {
-    case byNumberPlate
-    case byBatteryCapacity
-}
+
 
 

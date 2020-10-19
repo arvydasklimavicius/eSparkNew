@@ -10,8 +10,10 @@ import UIKit
 class ViewController: UIViewController {
     
     var availableVehicles = [VehicleData]()
+    var filteredVehicles: [VehicleData] = []
 //    var vehicleApi = VehicleApi()
     
+
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var filterController: UISegmentedControl!
@@ -26,6 +28,7 @@ class ViewController: UIViewController {
         
         
     }
+    
     
  //MARK: - URL session call
     
@@ -56,29 +59,38 @@ class ViewController: UIViewController {
                 print(availableVehicles)
                 print(availableVehicles.count)
                 
+                
+                
             }
         } catch {
             print(error)
         }
         return availableVehicles
     }
+ //MARK: - Filtering functionality
     
     @IBAction func filterChanged(_ sender: UISegmentedControl) {
-//        switch filterController.selectedSegmentIndex {
-//        case 0:
-//            availableVehicles.sort { (first, second) -> Bool in
-//                first.plateNumber.lowercased() < second.plateNumber.lowercased()
-//                tableView.reloadData()
-//                return availableVehicles(first.plateNumber < second.plateNumber)
-//            }
-//        default: break
-//        }
+        
+        switch filterController.selectedSegmentIndex {
+        case 0:
+            availableVehicles.sort { (first, second) -> Bool in
+                first.plateNumber.lowercased() < second.plateNumber.lowercased()
+            }
+            tableView.reloadData()
+        case 1:
+            availableVehicles.sort { (first, second) -> Bool in
+                first.batteryPercentage < second.batteryPercentage
+            }
+            tableView.reloadData()
+
+        default: break
+        }
+        
+        
         
     }
     
     
-    
-
 }
 
 //MARK: - TabkeView configuration
