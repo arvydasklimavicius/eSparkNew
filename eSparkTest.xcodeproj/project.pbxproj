@@ -19,6 +19,7 @@
 		CE332BA72534D9DF00BF3C6B /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE332BA62534D9DF00BF3C6B /* VehicleCell.swift */; };
 		CE332BAC2534E28D00BF3C6B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE332BAB2534E28D00BF3C6B /* ImageView.swift */; };
 		CE332BB625363E8700BF3C6B /* VehicleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE332BB525363E8700BF3C6B /* VehicleApi.swift */; };
+		CE332BBB253F646600BF3C6B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE332BBA253F646600BF3C6B /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		CE332BA62534D9DF00BF3C6B /* VehicleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCell.swift; sourceTree = "<group>"; };
 		CE332BAB2534E28D00BF3C6B /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		CE332BB525363E8700BF3C6B /* VehicleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleApi.swift; sourceTree = "<group>"; };
+		CE332BBA253F646600BF3C6B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				CE332B9B2534CE0D00BF3C6B /* VehicleData.swift */,
 				CE332BAB2534E28D00BF3C6B /* ImageView.swift */,
 				CE332BB525363E8700BF3C6B /* VehicleApi.swift */,
+				CE332BBA253F646600BF3C6B /* LocationManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				CE332BA72534D9DF00BF3C6B /* VehicleCell.swift in Sources */,
 				CE332B9C2534CE0D00BF3C6B /* VehicleData.swift in Sources */,
 				CE332B692534CDCC00BF3C6B /* ViewController.swift in Sources */,
+				CE332BBB253F646600BF3C6B /* LocationManager.swift in Sources */,
 				CE332B652534CDCC00BF3C6B /* AppDelegate.swift in Sources */,
 				CE332B672534CDCC00BF3C6B /* SceneDelegate.swift in Sources */,
 				CE332BB625363E8700BF3C6B /* VehicleApi.swift in Sources */,

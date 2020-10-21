@@ -5,7 +5,7 @@
 //  Created by Arvydas Klimavicius on 2020-10-13.
 //
 
-import Foundation
+import UIKit
 
 class VehicleApi {
     

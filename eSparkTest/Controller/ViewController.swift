@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
     
     var availableVehicles = [VehicleData]()
-    var filteredVehicles: [VehicleData] = []
+    let locationManager = CLLocationManager()
+    
+//    let location = LocationManager()
 //    var vehicleApi = VehicleApi()
     
 
@@ -20,13 +23,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
         tableView.dataSource = self
         tableView.delegate = self
-//        vehicleApi.getVehicle()
-//        tableView.reloadData()
         getVehicle()
         
-        
+//        location.locationManager.requestWhenInUseAuthorization()
+//        vehicleApi.getVehicle()
+
+
     }
     
     
@@ -110,5 +117,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+
+//MARK: - CLLocationManager Delegate
+extension ViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            let lon = location.coordinate.longitude
+            let lat = location.coordinate.latitude
+            print("\(lon), \(lat)")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
 }
 
